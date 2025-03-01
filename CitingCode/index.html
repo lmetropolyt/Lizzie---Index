@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <head>
-     <!-- Tutorial 1 Recursive Tree: https://p5js.org/examples/repetition-recursive-tree/ 
-          Turtorial 2 ------: -->
+     <!-- Tutorial 1 Recursive Tree from p5: https://p5js.org/examples/repetition-recursive-tree/ 
+          Turtorial 2  from W3 Build a Web: https://www.w3schools.com/howto/howto_website.asp 
+
+          Webkinz fairys info source: https://webkinz.fandom.com/wiki/Category:Fairies-->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--From build a web tutorial-->
     <title>
         Citing Code
     </title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"> <!--FRamework provided by tutorial--> 
     <script src="p5.min.js"></script>
 </head>
 <body>
     <script src="sketch.js"></script>
+    <!-- Navigation bar from w3 source -->
+<nav class="w3-bar w3-black">
+    <a href="#home" class="w3-button w3-bar-item">Home</a>
+    <a href="#about" class="w3-button w3-bar-item">About</a>
+    <a href="#fairys" class="w3-button w3-bar-item">Fairys</a>
+    <a href="#tree" class="w3-button w3-bar-item">Grow a tree</a>
+    <!-- Slide Show header (moves with javascript addition at the end)-->
+<section id="home">
+    <img class="mySlides" src="image1.png" style="width:100%">
+    <img class="mySlides" src="image2.png" style="width:100%">
+    <img class="mySlides" src="image3.png" style="width:100%">
+    <img class="mySlides" src="image4.png" style="width:100%">
+</section>
+  </nav>
+    <!--w3 title and subtitle-->
+  <section class="w3-container w3-center" style="max-width:600px">
+    <h2 class="w3-wide">WEBKINZ FAIRYS</h2>
+    <p class="w3-opacity"><i>Who are these fairys I keep putting in all my labs? </i></p>
+  </section>
+  <!--body text-->
+  <section id="about" class="w3-container w3-content w3-center" style="max-width:600px">
+    <p class="w3-justify">
+        The Webkinz fairies are characters in Webkinz World featured in games such as Alyssa’s Star Challenge, Fairy Falls, and Tulip Trouble 2. Nafaria is a bad fairy associated with bad decisions, losing in games, and occasionally tricking players. Alyssa is a helpful fairy with two outfits: a blue one for Alyssa’s Star Challenge and a green one for Fairy Falls. Both games are located in the Magical Forest. Maddie and Nafaria appear in the arcade game Tulip Trouble 2, where Maddie, a pink good fairy, helps the tulips bloom.</p>
+    </section>
+    <!--fairy with the names section. also learned from w3-->
+    <section id="fairys" class="w3-row-padding w3-center w3-light-grey">
+        <article class="w3-third">
+          <p>Maddie</p>
+          <img src="goodfairy.png" alt="Maddie" style="width:50%">
+        </article>
+        <article class="w3-third">
+          <p>Nafaria</p>
+          <img src="badfairy.png" alt="Nafaria" style="width:50%">
+        </article>
+        <article class="w3-third">
+          <p>Alyssa</p>
+          <img src="AlyssaFairy.png" alt="Random Name" style="width:50%">
+        </article>
+      </section>
+      <!-- Footer -->
+<footer id="tree" class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+    <a href="#"><i class="fa fa-facebook-official"></i></a>
+    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-flickr"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <p class="w3-medium">
+      Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    </p>
+  </footer>
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+    </script>
 </body>
 </html>

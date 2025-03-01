@@ -1,10 +1,12 @@
+//This code was learned from p5 Recursive Tree tutorial unless otherwise marked. The parts of the code i added was the growth action
+
 let angle;
 let branchLength = 0; 
-let maxBranchLength = 200; 
+let maxBranchLength = 200; // modified to change height the tree would 
 let growthSpeed = 1; 
 
 function setup() {
-  createCanvas(windowWidth, 630);
+  createCanvas(windowWidth, 600); //Changed to fit any screen
   colorMode(HSB);
   angleMode(DEGREES);
 }
@@ -19,14 +21,14 @@ function draw() {
   translate(width / 2, height);
 
   stroke(0, 255, 255);
-  line(0, 0, 0, 0, -branchLength);
+  line(0, 0, 0, 0, -branchLength); //Slightly modified for growth 
 
   translate(0, -branchLength);
 
   branch(branchLength, 0);
 
-  if (branchLength < maxBranchLength) { 
-    branchLength += growthSpeed; 
+  if (branchLength < maxBranchLength) { // Added to create growth
+    branchLength += growthSpeed; //Added as well
   } 
 
   describe(
@@ -35,34 +37,19 @@ function draw() {
 }
 
 function branch(h, level) {
-  // Set the hue based on the recursion level
   stroke(level * 25, 255, 255);
 
-  // Each branch will be 2/3 the size of the previous one
+
   h *= 0.66;
 
-  // Draw if our branch length > 2, otherwise stop the recursion
+
   if (h > 2) {
-    // Draw the right branch
-    // Save the current coordinate system
     push();
-
-    // Rotate by angle
     rotate(angle);
-
-    // Draw the branch
     line(0, 0, 0, -h);
-
-    // Move to the end of the branch
     translate(0, -h);
-
-    // Call branch() recursively
     branch(h, level + 1);
-
-    // Restore the saved coordinate system
     pop();
-
-    // Draw the left branch
     push();
     rotate(-angle);
     line(0, 0, 0, -h);
