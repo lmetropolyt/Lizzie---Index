@@ -20,7 +20,7 @@ function draw() {
 
   translate(width / 2, height);
 
-  stroke(0, 255, 255);
+  stroke((frameCount % 360), 255, 255); //where i changed the colour from tutorial
   line(0, 0, 0, 0, -branchLength); //Slightly modified for growth 
 
   translate(0, -branchLength);
@@ -37,7 +37,7 @@ function draw() {
 }
 
 function branch(h, level) {
-  stroke(level * 25, 255, 255);
+  stroke((level * 30 + frameCount) % 360, 255, 255); //where i changed the colour from tutorial
 
 
   h *= 0.66;
