@@ -9,6 +9,33 @@
     <title>Citing Code</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"> <!-- Framework provided by tutorial -->
     <script src="p5.min.js"></script>
+    <style>
+     body, html {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+      }
+      #treeCanvas {
+          display: block;
+          margin: 0 auto;
+          width: 100%;
+          height: 100%;
+      }
+      section {
+          padding: 0;
+          margin: 0;
+      }
+      #tree {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          height: 600px;
+      }
+      footer {
+          padding: 20px; /* Adjusted padding to reduce blank space caused by integrating the recursive tree*/
+      }
+  </style>
 </head>
 <body>
     <!-- Navigation bar from w3 source -->
@@ -21,8 +48,10 @@
     <!-- Slide Show header (moves with javascript addition at the end) -->
     <section id="home">
         <img class="mySlides" src="image3.png" style="width:100%">
+        <img class="mySlides" src="image5.png" style="width:100%">
         <img class="mySlides" src="image2.png" style="width:100%">
         <img class="mySlides" src="image1.png" style="width:100%">
+        <img class="mySlides" src="image7.jpg" style="width:100%">
         <img class="mySlides" src="image4.png" style="width:100%">
     </section>
     <!-- w3 title and subtitle -->
@@ -54,8 +83,14 @@
     <section class="w3-container w3-content w3-center" style="max-width:600px">
         <p class="w3-justify">Now that you've met the fairies, help them grow a tree!🧚🌳🧚</p>
     </section>
+  </section>
+  <!-- Tree Section -->
+  <section id="tree" class="w3-container w3-center" style="max-width:100%; height:600px;"> <!-- Added Tree Section -->
+      <h2 class="w3-wide">⬇️ Rainbow Fairy Tree ⬇️</h2>
+      <div id="treeCanvas"></div> <!-- Added div to hold the tree canvas -->
+  </section>
     <!-- Footer -->
-    <footer id="tree" class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+    <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
         Refresh for the tree to grow!
         <p class="w3-medium">
             Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
