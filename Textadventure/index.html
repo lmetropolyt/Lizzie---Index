@@ -33,6 +33,11 @@
             font-size: 36px; /* Make the text bigger */
             margin-top: 20px; /* Add some margin on top */
         }
+        #radioContainer {
+            display: block; /* Make it a block-level element */
+            margin: 20px auto; /* Center it horizontally and add some margin on top */
+            color: white; /* Make the text white */
+        }
     </style>
 </head>
 <body>
@@ -43,6 +48,11 @@
     <div id="inputContainer">
         <input id="nameInput" type="text" placeholder="Enter your fave word">
         <button id="submitButton">Submit</button>
+    </div>
+    <div id="radioContainer">
+        <label><input type="radio" name="animation" value="boiling" checked> Boiling</label>
+        <label><input type="radio" name="animation" value="floating"> Floating</label>
+        <label><input type="radio" name="animation" value="bouncing"> Bouncing</label>
     </div>
 </body>
 </html>
