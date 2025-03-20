@@ -29,9 +29,17 @@
             margin: 20px auto; /* Center it horizontally and add some margin on top */
         }
         #titleText {
-            color: white; /* Make the text white */
             font-size: 36px; /* Make the text bigger */
             margin-top: 20px; /* Add some margin on top */
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: rainbow 5s infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         #radioContainer {
             display: block; /* Make it a block-level element */
