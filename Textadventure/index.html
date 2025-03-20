@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Adventure</title>
+    <script src="p5.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'WebkinzBook';
+            src: url('fonts/webkinz_book_cyrillic.otf') format('opentype');
+        }
+        body {
+            background-color: #000000;
+            text-align: center;
+            font-family: 'WebkinzBook', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url('Stove.png'); 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+        }
+        #canvasContainer {
+            display: block; /* Make it a block-level element */
+            margin: 0 auto; /* Center it horizontally */
+            padding-top: 200px; /* Add padding to the top to center it vertically */
+        }
+        #inputContainer {
+            display: block; /* Make it a block-level element */
+            margin: 20px auto; /* Center it horizontally and add some margin on top */
+        }
+        #titleText {
+            color: white; /* Make the text white */
+            font-size: 36px; /* Make the text bigger */
+            margin-top: 20px; /* Add some margin on top */
+        }
+    </style>
+</head>
+<body>
+    <div id="titleText">Make a rainbow alphabet fairy soup</div>
+    <div id="canvasContainer">
+        <script src="script.js"></script>
+    </div>
+    <div id="inputContainer">
+        <input id="nameInput" type="text" placeholder="Enter your fave word">
+        <button id="submitButton">Submit</button>
+    </div>
+</body>
+</html>
