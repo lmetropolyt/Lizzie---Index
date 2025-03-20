@@ -62,6 +62,11 @@
             height: 200px;
             cursor: pointer;
         }
+        #fairyContainer .caption {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
         #gunkContainer {
             position: fixed;
             top: 50%;
@@ -102,7 +107,10 @@
         <label><input type="radio" name="animation" value="bouncing"> Bouncing</label>
     </div>
     <div id="fairyContainer">
-        <img src="AlyssaFairy.png" alt="Alyssa Fairy">
+        <a href="Alyssa/index.html">
+            <img src="AlyssaFairy.png" alt="Alyssa Fairy">
+            <div class="caption">Click to serve soup</div>
+        </a>
     </div>
     <div id="gunkContainer">
         <img src="Gunk.png" alt="Gunk" onclick="cycleGunkImage()">
