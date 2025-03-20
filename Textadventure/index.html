@@ -31,10 +31,12 @@
         #titleText {
             font-size: 36px; /* Make the text bigger */
             margin-top: 20px; /* Add some margin on top */
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
-            animation: rainbow 5s infinite;
+            animation: rainbow 10s infinite linear;
         }
         @keyframes rainbow {
             0% { background-position: 0% 50%; }
@@ -45,6 +47,42 @@
             display: block; /* Make it a block-level element */
             margin: 20px auto; /* Center it horizontally and add some margin on top */
             color: white; /* Make the text white */
+        }
+        #fairyContainer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            text-align: right;
+        }
+        #fairyContainer img {
+            display: block;
+            margin-bottom: 10px;
+            width: auto; /* Set the width to 30 pixels */
+            height: 100px; /* Set the height to 30 pixels */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        #gunkContainer {
+            position: fixed;
+            top: 50%; /* Position halfway down the screen */
+            left: 20px; /* Align to the left */
+            transform: translateY(-50%); /* Center vertically */
+            text-align: left;
+            padding-left: 20px; /* Add padding to the left */
+        }
+        #gunkContainer img {
+            width: 200px; /* Set the width to 200 pixels */
+            height: auto; /* Maintain aspect ratio */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        #subtitle {
+            position: fixed;
+            top: calc(50% + 120px); /* Position below the gunk image */
+            left: 20px; /* Align to the left */
+            transform: translateY(-50%);
+            text-align: left;
+            padding-left: 20px;
+            color: white; /* Make the text white */
+            font-size: 14px; /* Set the font size */
         }
     </style>
 </head>
@@ -62,5 +100,23 @@
         <label><input type="radio" name="animation" value="floating"> Floating</label>
         <label><input type="radio" name="animation" value="bouncing"> Bouncing</label>
     </div>
+    <div id="fairyContainer">
+        <img src="AlyssaFairy.png" alt="Alyssa Fairy">
+        <img src="goodfairy.png" alt="Good Fairy">
+        <img src="badfairy.png" alt="Bad Fairy">
+    </div>
+    <div id="gunkContainer">
+        <img src="Gunk.png" alt="Gunk" onclick="cycleGunkImage()">
+    </div>
+    <div id="subtitle">Click for your soup flavour</div>
+    <script>
+        var gunkImages = ['Gunk.png', 'Blue_Gunk.webp', 'Green_Gunk.webp', 'Grey_Gunk.webp', 'Orange_Gunk.webp'];
+        var currentGunkIndex = 0;
+
+        function cycleGunkImage() {
+            currentGunkIndex = (currentGunkIndex + 1) % gunkImages.length;
+            document.querySelector('#gunkContainer img').src = gunkImages[currentGunkIndex];
+        }
+    </script>
 </body>
 </html>
