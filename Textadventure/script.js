@@ -5,7 +5,7 @@ var animationType = 'boiling';
 
 function setup() {
   let canvas = createCanvas(300, 300);
-  canvas.parent('canvasContainer'); // Attach the canvas to the div with id "canvasContainer"
+  canvas.parent('canvasContainer'); 
   
   input = select('#nameInput');
   button = select('#submitButton');

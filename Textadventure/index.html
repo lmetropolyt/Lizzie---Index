@@ -20,17 +20,17 @@
             background-attachment: fixed;
         }
         #canvasContainer {
-            display: block; /* Make it a block-level element */
-            margin: 0 auto; /* Center it horizontally */
-            padding-top: 200px; /* Add padding to the top to center it vertically */
+            display: block;
+            margin: 0 auto;
+            padding-top: 200px;
         }
         #inputContainer {
-            display: block; /* Make it a block-level element */
-            margin: 20px auto; /* Center it horizontally and add some margin on top */
+            display: block;
+            margin: 20px auto;
         }
         #titleText {
-            font-size: 36px; /* Make the text bigger */
-            margin-top: 20px; /* Add some margin on top */
+            font-size: 36px;
+            margin-top: 20px;
             background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet);
             background-size: 300% 300%;
             -webkit-background-clip: text;
@@ -44,45 +44,46 @@
             100% { background-position: 0% 50%; }
         }
         #radioContainer {
-            display: block; /* Make it a block-level element */
-            margin: 20px auto; /* Center it horizontally and add some margin on top */
-            color: white; /* Make the text white */
+            display: block;
+            margin: 20px auto;
+            color: white;
         }
         #fairyContainer {
             position: fixed;
-            top: 20px;
+            top: 50%;
             right: 20px;
+            transform: translateY(-50%);
             text-align: right;
         }
         #fairyContainer img {
             display: block;
             margin-bottom: 10px;
-            width: auto; /* Set the width to 30 pixels */
-            height: 100px; /* Set the height to 30 pixels */
-            cursor: pointer; /* Change cursor to pointer on hover */
+            width: auto;
+            height: 200px;
+            cursor: pointer;
         }
         #gunkContainer {
             position: fixed;
-            top: 50%; /* Position halfway down the screen */
-            left: 20px; /* Align to the left */
-            transform: translateY(-50%); /* Center vertically */
-            text-align: left;
-            padding-left: 20px; /* Add padding to the left */
-        }
-        #gunkContainer img {
-            width: 200px; /* Set the width to 200 pixels */
-            height: auto; /* Maintain aspect ratio */
-            cursor: pointer; /* Change cursor to pointer on hover */
-        }
-        #subtitle {
-            position: fixed;
-            top: calc(50% + 120px); /* Position below the gunk image */
-            left: 20px; /* Align to the left */
+            top: 50%;
+            left: 20px;
             transform: translateY(-50%);
             text-align: left;
             padding-left: 20px;
-            color: white; /* Make the text white */
-            font-size: 14px; /* Set the font size */
+        }
+        #gunkContainer img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+        #subtitle {
+            position: fixed;
+            top: calc(50% + 120px);
+            left: 20px;
+            transform: translateY(-50%);
+            text-align: left;
+            padding-left: 20px;
+            color: white;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -102,8 +103,6 @@
     </div>
     <div id="fairyContainer">
         <img src="AlyssaFairy.png" alt="Alyssa Fairy">
-        <img src="goodfairy.png" alt="Good Fairy">
-        <img src="badfairy.png" alt="Bad Fairy">
     </div>
     <div id="gunkContainer">
         <img src="Gunk.png" alt="Gunk" onclick="cycleGunkImage()">
