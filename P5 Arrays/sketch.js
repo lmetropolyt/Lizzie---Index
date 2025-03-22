@@ -1,40 +1,33 @@
-/// confetti 
-/// rects same size 
-/// position and colour randomized
-/// rotation randomized
-/// fullscreen animation
-//// stretch goals
-/// emoji? 
-/// button to start confetti
-/// add audio
-/// window refresh
-
 var shapes = []; // circles and rectangles
 var positions = []; // only the y changes 
 var speed = []; // doesn't change
-var colours = []; /// doesn't change 
-var rotations = []; /// doesn't change
+var colours = []; // doesn't change 
+var rotations = []; // doesn't change
 
 var numberOfShapes = 300;
 
 var btn; 
 var thursday = false;
 var mysound;
+var bgImage; // Variable to hold the background image
+
+function preload() {
+   bgImage = loadImage('rainbow.jpg'); // rainbow Fairy Background
+   mysound = loadSound("mysound.mp3");
+}
 
 function setup(){
    createCanvas(windowWidth, windowHeight);
 
-   mysound = createAudio("mysound.mp3");
-
-   btn = createButton("Thursday Night");
+   btn = createButton("Activate Fairy Magic");
    btn.position(10,10);
    btn.mousePressed(function(){
        thursday = !thursday;
        if(thursday){
-           btn.html("Leave Party");
+           btn.html("Kill all fairies");
            mysound.play();
        }else{
-           btn.html("Thursday Night");
+           btn.html("Activate Fairy Magic");
        }
    });
 
@@ -59,15 +52,13 @@ function setup(){
 }
 
 function draw(){
-   background(100);
+   image(bgImage, 0, 0, width, height); // Draw the background image
    if(thursday === true){
        confetti();
    }
-
 }
 
 function confetti(){
-
    var interval = windowWidth / numberOfShapes;
 
    for(var i = 0; i < numberOfShapes; i++){
@@ -75,7 +66,6 @@ function confetti(){
        push();
        translate(i*interval, positions[i]);
        rotate( rotations[i] );
-       // if(frameCount % 60 > 30){
        if( shapes[i] === "rect" ){
            rect(0, 0, 5, 30);
        }
@@ -83,21 +73,20 @@ function confetti(){
            circle(0,0,10);
        }
        if( shapes[i] === "emoji"){
-           text("😍", 0, 0);
+           text("✨", 0, 0);
+       }
+       if( shapes[i] === "emoji"){
+           text("🌷", 20, 30);
        }
        pop();
-
    }
 
-   // change the y position for each shape based on speed
    for(var i = 0; i < numberOfShapes; i++){
        positions[i] += speed[i];
        if(positions[i] > height){
            positions[i] = -50;
        }
    }
-
-
 }
 
 function windowResized(){
