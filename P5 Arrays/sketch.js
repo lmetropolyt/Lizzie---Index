@@ -19,15 +19,19 @@ function preload() {
 function setup(){
    createCanvas(windowWidth, windowHeight);
 
-   btn = createButton("Activate Fairy Magic");
-   btn.position(10,10);
+   btn = createButton("START THE FAIRY PARTY!!!");
+   btn.position(windowWidth / 2 - btn.width / 2, windowHeight / 2 - btn.height / 2); // Center the button
+   btn.style('position', 'absolute'); // Use absolute positioning
+   btn.style('left', '50%'); // Center horizontally
+   btn.style('top', '50%'); // Center vertically
+   btn.style('transform', 'translate(-50%, -50%)'); // Adjust for the button's size
    btn.mousePressed(function(){
        thursday = !thursday;
        if(thursday){
-           btn.html("Kill all fairies");
+           btn.html("STOP THE PARTY");
            mysound.play();
        }else{
-           btn.html("Activate Fairy Magic");
+           btn.html("START THE FAIRY PARTY!!!");
        }
    });
 
@@ -91,4 +95,5 @@ function confetti(){
 
 function windowResized(){
    resizeCanvas(windowWidth, windowHeight);
+   btn.position(windowWidth / 2 - btn.width / 2, windowHeight / 2 - btn.height / 2); // Re-center the button on window resize
 }

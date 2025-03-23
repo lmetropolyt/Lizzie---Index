@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Welcome back!</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="p5.min.js"></script>
-    </head>
-    <body>
-        <script src="sketch.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome back!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="p5.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative; /* Ensure body is the containing block */
+        }
+        #discoGif {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px; /* Adjust the width as needed */
+            height: auto;
+            z-index: 20; /* Ensure the gif is on top of the canvas and fairy images */
+        }
+        .fairyRow {
+            position: absolute;
+            bottom: 100px; /* Position 200px from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px; /* Space between images */
+            z-index: 10; /* Ensure the fairy images are below the disco gif */
+        }
+        .fairyRow img {
+            width: auto; /* Adjust the width as needed */
+            height: 199px;
+        }
+    </style>
+</head>
+<body>
+    <img id="discoGif" src="disco.gif" alt="Disco">
+    <div class="fairyRow">
+        <img src="badfairy.png" alt="Bad Fairy">
+        <img src="goodfairy.png" alt="Good Fairy">
+        <img src="AlyssaFairy.png" alt="Alyssa Fairy">
+    </div>
+    <script src="sketch.js"></script>
+</body>
 </html>
