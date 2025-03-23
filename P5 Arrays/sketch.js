@@ -13,7 +13,7 @@ var bgImage; // Variable to hold the background image
 
 function preload() {
    bgImage = loadImage('rainbow.jpg'); // rainbow Fairy Background
-   mysound = loadSound("mysound.mp3");
+   mysound = loadSound("welcome.mp3");
 }
 
 function setup(){
