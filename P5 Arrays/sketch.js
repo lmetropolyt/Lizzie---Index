@@ -14,14 +14,14 @@ let particles = [];
 
 function preload() {
    bgImage = loadImage('rainbow.jpg'); // rainbow Fairy Background
-   mysound = loadSound("welcome.mp3");
 }
 
 function setup(){
    createCanvas(windowWidth, windowHeight);
    colorMode(HSB, 360, 100, 100); // Set color mode to HSB
 
-   btn = createButton("START THE FAIRY PARTY!!!");
+   btn = select('#partyButton');
+   mysound = select('#partyMusic');
    btn.position(windowWidth / 2 - btn.width / 2, windowHeight / 2 - btn.height / 2); // Center the button
    btn.style('position', 'absolute'); // Use absolute positioning
    btn.style('left', '50%'); // Center horizontally
@@ -32,9 +32,16 @@ function setup(){
        if(thursday){
            btn.html("STOP THE PARTY");
            mysound.play();
+           document.getElementById('badFairy').classList.add('rotate');
+           document.getElementById('goodFairy').classList.add('rotate');
+           document.getElementById('alyssaFairy').classList.add('rotate');
        }else{
            btn.html("START THE FAIRY PARTY!!!");
-           mysound.stop();
+           mysound.pause();
+           mysound.currentTime = 0;
+           document.getElementById('badFairy').classList.remove('rotate');
+           document.getElementById('goodFairy').classList.remove('rotate');
+           document.getElementById('alyssaFairy').classList.remove('rotate');
        }
    });
 
@@ -115,7 +122,7 @@ class Particle {
         this.vx = random(-1, 1);
         this.vy = random(-5, -1);
         this.alpha = 255;
-        this.color = color(60, 30, 100); // particle system colour
+        this.color = color(60, 30, 100); // Magical pastel yellow color in HSB
     }
 
     finished() {
@@ -152,5 +159,5 @@ function drawStar(x, y, radius1, radius2, npoints) {
 
 function windowResized(){
    resizeCanvas(windowWidth, windowHeight);
-   btn.position(windowWidth / 2 - btn.width / 2, windowHeight / 2 - btn.height / 2); 
+   btn.position(windowWidth / 2 - btn.width / 2, windowHeight / 2 - btn.height / 2); // this is what makes the button centred 
 }
