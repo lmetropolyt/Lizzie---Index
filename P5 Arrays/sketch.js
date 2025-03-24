@@ -10,6 +10,7 @@ var btn;
 var thursday = false;
 var mysound;
 var bgImage; // Variable to hold the background image
+let particles = [];
 
 function preload() {
    bgImage = loadImage('rainbow.jpg'); // rainbow Fairy Background
@@ -33,6 +34,7 @@ function setup(){
            mysound.play();
        }else{
            btn.html("START THE FAIRY PARTY!!!");
+           mysound.stop();
        }
    });
 
@@ -60,6 +62,17 @@ function draw(){
    image(bgImage, 0, 0, width, height); // Draw the background image
    if(thursday === true){
        confetti();
+       for (let i = 0; i < 5; i++) {
+           let p = new Particle();
+           particles.push(p);
+       }
+       for (let i = particles.length - 1; i >= 0; i--) {
+           particles[i].update();
+           particles[i].show();
+           if (particles[i].finished()) {
+               particles.splice(i, 1);
+           }
+       }
    }
 }
 
@@ -95,6 +108,33 @@ function confetti(){
    }
 }
 
+class Particle {
+    constructor() {
+        this.x = random(width);
+        this.y = height;
+        this.vx = random(-1, 1);
+        this.vy = random(-5, -1);
+        this.alpha = 255;
+        this.color = color(60, 30, 100); // particle system colour
+    }
+
+    finished() {
+        return this.alpha < 0;
+    }
+
+    update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.alpha -= 5;
+    }
+
+    show() {
+        noStroke();
+        fill(this.color.levels[0], this.color.levels[1], this.color.levels[2], this.alpha);
+        ellipse(this.x, this.y, 16);
+    }
+}
+
 function drawStar(x, y, radius1, radius2, npoints) {
    let angle = TWO_PI / npoints;
    let halfAngle = angle / 2.0;
@@ -112,5 +152,5 @@ function drawStar(x, y, radius1, radius2, npoints) {
 
 function windowResized(){
    resizeCanvas(windowWidth, windowHeight);
-   btn.position(windowWidth / 2 - btn.width / 2, windowHeight / 2 - btn.height / 2); // Re-center the button on window resize
+   btn.position(windowWidth / 2 - btn.width / 2, windowHeight / 2 - btn.height / 2); 
 }
