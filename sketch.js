@@ -1,42 +1,52 @@
-var x = 0;
-var y = 0;
-
+// load image
+// load a video
+// load a sound
+// playback rate 
+// volume 
+// many kitties
+var kitten;
+var kindle;
+var meow;
+var numberofkitties = 9;
 function setup(){
-    createCanvas(720,150);
+    createCanvas(windowWidth, windowHeight);
+    imageMode(CENTER);
+    kitten = loadImage('kitten.jpeg');
+    kindle = createVideo('kittens.mp4');
+    kindle.hide();
+    kindle.volume(0);
+    kindle.play();
+    meow = createAudio('meow.wav');
+    meow.speed(10);
 }
 
-// playing with the feature we learned in class by making more stars and changing the colour!!!!
 function draw(){
-    background('#FFF68F'); // automatic semicolon intertion
-    fill('lime');
-    star(x, y, 5, 15, 4);
-    star(x+100, y, 5, 15, 4);
-    star(x+200, y, 5, 15, 4);
-    star(x+300, y, 5, 15, 4);
-    star(x+400, y, 5, 15, 4);
-    star(x+500, y, 5, 15, 4);
-    star(x+600, y, 5, 15, 4);
-    star(x+700, y, 5, 15, 4);
-    x = x + 1;
-    x = x % 700; //modulo operator
-    y = y + 2;
-    y = y % 150;
-
-
+    background('blue');
+    imageMode(CORNER);
+    for(var x = 0; x < numberofkitties; x++){
+        for(var y = 0; y < numberofkitties; y++){
+            push();
+            translate(x * width/numberofkitties, y * height/numberofkitties);
+            rotate(frameCount/50);
+            image(kindle, 0, 0, 100, 100);
+            pop();
+        }
+    }
+    imageMode(CENTER);
+    push();
+    translate(mouseX, mouseY);
+    rotate(frameCount/30);
+    image(kitten, 0, 0);
+    pop();
 }
 
-// function from p5.js docs! https://archive.p5js.org/examples/form-star.html
-function star(x, y, radius1, radius2, npoints) {
-    let angle = TWO_PI / npoints;
-    let halfAngle = angle / 2.0;
-    beginShape();
-    for (let a = 0; a < TWO_PI; a += angle) {
-      let sx = x + cos(a) * radius2;
-      let sy = y + sin(a) * radius2;
-      vertex(sx, sy);
-      sx = x + cos(a + halfAngle) * radius1;
-      sy = y + sin(a + halfAngle) * radius1;
-      vertex(sx, sy);
-    }
-    endShape(CLOSE);
-  }
+function mousePressed(){
+    kindle.play();
+    meow.speed(10);
+    meow.play();
+}
+
+
+function windowResized(){
+    resizeCanvas(windowWidth, windowHeight);
+}

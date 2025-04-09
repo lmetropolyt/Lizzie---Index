@@ -1,27 +1,74 @@
 <!DOCTYPE html>
-    <head>
-        <!-- FIRST: https://p5js.org/reference/p5/createImg/#:~:text=Reference%20createImg()-,createImg(),as%20in%20'%2Fassets%2Fimage.
-            SECOND: -->
-        <meta charset="UTF-8">
-        <title>
-            Lab 2
-        </title>
-        <script src="p5.min.js"></script>
-        <style>
-            @font-face {
-                font-family: 'WebkinzBook';
-                src: url('fonts/webkinz_book_cyrillic.otf') format('opentype');
-            }
-            body {
-                background-color: #da0e48;
-                text-align: center;
-                font-family: 'WebkinzBook', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            }
-           
-        </style>
-    </head>
-    <body>
-        <script src="sketch.js"></script>
-        <img src="goodfairy.png" style="max-width: 20%; height: auto;">
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curio Shop!!</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: rainbow 10s infinite;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .image-row img {
+            width: auto;
+            height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-row">
+        <img src="Arte.webp" title="Arte" id="arte">
+        <img src="Gem.png" title="Gem" class="play-m">
+        <img src="crown.webp" title="Crown" class="play-m">
+        <img src="Yum.webp" title="Yum" class="play-m">
+    </div>
+
+    <audio id="audio-welcome">
+        <source src="welcome.mp3">
+    </audio>
+    <audio id="audio-m">
+        <source src="M.mp3">
+    </audio>
+
+    <script>
+        var arteImage = document.getElementById('arte');
+        var welcomeAudio = document.getElementById('audio-welcome');
+
+        arteImage.onclick = function() {
+            welcomeAudio.currentTime = 0;
+            welcomeAudio.volume = 1;
+            welcomeAudio.playbackRate = 1;
+            welcomeAudio.play();
+        };
+
+        var mImages = document.querySelectorAll('.play-m');
+        var mAudio = document.getElementById('audio-m');
+
+        mImages.forEach(function(image) {
+            image.onclick = function() {
+                mAudio.currentTime = 0;
+                mAudio.volume = 1;
+                mAudio.playbackRate = 1;
+                mAudio.play();
+            };
+        });
+    </script>
+</body>
 </html>
