@@ -38,7 +38,7 @@ function draw() {
         imageMode(CENTER);
         image(img, width / 2, height / 2 + 40, 100, 100); // Display the fairy's image
     } else {
-        console.log("No image loaded for:", currentFairy.name);
+        console.log("No image available for:", currentFairy.name);
     }
 
     // Display instructions to navigate

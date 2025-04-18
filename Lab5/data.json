@@ -5,19 +5,19 @@
             "name": "Alyssa Fairy",
             "habitat": "The Magic Forest",
             "color": "Green",
-            "image": "images/AlyssaFairy.png"
+            "image": "AlyssaFairy.png"
         },
         {
             "name": "Good Fairy",
             "habitat": "Tulip Garden",
             "color": "pink",
-            "image": "images/GoodFairy.png"
+            "image": "GoodFairy.png"
         },
         {
             "name": "Bad Fairy",
             "habitat": "The Magic Forest",
             "color": "Purple",
-            "image": "images/BadFairy.png"
+            "image": "BadFairy.png"
         }
     ]
 }
