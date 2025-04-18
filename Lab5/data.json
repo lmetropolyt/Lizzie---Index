@@ -1,4 +1,23 @@
 {
-    "sleep" : 8,
-    "coffee" : ["Brazilian", "Columbian", "Kenyan", "Guatamalan"]
+    "Fairy": 3,
+    "FairyName": [
+        {
+            "name": "Alyssa Fairy",
+            "habitat": "The Magic Forest",
+            "color": "Green",
+            "image": "AlyssaFairy.png"
+        },
+        {
+            "name": "Good Fairy",
+            "habitat": "Tulip Garden",
+            "color": "pink",
+            "image": "GoodFairy.png"
+        },
+        {
+            "name": "Bad Fairy",
+            "habitat": "The Magic Forest",
+            "color": "Purple",
+            "image": "BadFairy.png"
+        }
+    ]
 }
