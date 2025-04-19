@@ -1,42 +1,57 @@
-var gradientImage;
+let snowflakes = []; // Array to store snowflakes
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-
-    // Create a gradient image using createImage()
-    gradientImage = createImage(width, height); // Match the canvas size
-    gradientImage.loadPixels();
-    for (let x = 0; x < gradientImage.width; x++) {
-        for (let y = 0; y < gradientImage.height; y++) {
-            let a = map(y, 0, gradientImage.height, 0, 255); // Vertical gradient
-            let c = color(255, 255, 255, a); // White gradient with transparency
-            gradientImage.set(x, y, c); // Set pixel color
-        }
-    }
-    gradientImage.updatePixels(); // Apply changes to the image
+    noStroke();
 }
 
 function draw() {
-    // Rainbow background
-    let gradientSpeed = frameCount % 400; // Animate the gradient
-    background(lerpColor(color('red'), color('blue'), gradientSpeed / 400));
+    clear(); // Clear the canvas for transparency
+    background(0, 0, 0, 0); // Transparent background
 
-    // Overlay the gradient image
-    image(gradientImage, 0, 0, width, height);
+    // Create new snowflakes
+    let t = frameCount / 60; // Time variable
+    for (let i = 0; i < random(5); i++) {
+        snowflakes.push(new Snowflake()); // Add a new snowflake
+    }
+
+    // Update and display snowflakes
+    for (let flake of snowflakes) {
+        flake.update(t); // Update snowflake position
+        flake.display(); // Draw snowflake
+    }
+
+    // Remove snowflakes that have moved off the screen
+    snowflakes = snowflakes.filter(flake => !flake.offScreen());
+}
+
+// Snowflake class
+class Snowflake {
+    constructor() {
+        this.posX = random(width);
+        this.posY = random(-50, 0);
+        this.size = random(2, 5);
+        this.speed = random(1, 3);
+        this.angle = random(TWO_PI);
+        this.dir = random([-1, 1]);
+    }
+
+    update(time) {
+        this.angle += this.dir * 0.01; // Slight rotation
+        this.posY += this.speed; // Move down
+        this.posX += sin(this.angle) * 2; // Sway left and right
+    }
+
+    display() {
+        fill(255, 255, 255, 200); // White with slight transparency
+        ellipse(this.posX, this.posY, this.size);
+    }
+
+    offScreen() {
+        return this.posY > height; // Check if the snowflake is off the screen
+    }
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-
-    // Recreate the gradient image to match the new canvas size
-    gradientImage = createImage(width, height);
-    gradientImage.loadPixels();
-    for (let x = 0; x < gradientImage.width; x++) {
-        for (let y = 0; y < gradientImage.height; y++) {
-            let a = map(y, 0, gradientImage.height, 0, 255); // Vertical gradient
-            let c = color(255, 255, 255, a); // White gradient with transparency
-            gradientImage.set(x, y, c); // Set pixel color
-        }
-    }
-    gradientImage.updatePixels();
 }

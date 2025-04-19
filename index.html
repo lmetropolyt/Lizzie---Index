@@ -11,22 +11,107 @@
             src: url('fonts/webkinz_book_cyrillic.otf') format('opentype');
         }
         body {
-            background-color: #ff3784;
+            background-color: #a237ff;
             text-align: center;
             font-family: 'WebkinzBook', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-       
+
+        /* Style for rainbow buttons */
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border-radius: 25px;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: rainbow 5s infinite;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* Hover effect for buttons */
+        a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Rainbow animation */
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place the canvas behind all other elements */
+        }
+
+        /* Flexbox container for images */
+        .fairy-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between images */
+            margin: 20px 0;
+        }
+
+        /* Spinning animation for fairy images */
+        .fairy-images img {
+            max-width: 150px;
+            height: auto;
+            animation: spin 10s linear infinite; /* Spin animation */
+        }
+
+        /* Keyframes for spinning */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Cool color effect for the heading */
+        h1 {
+            font-size: 3em; /* Keep the size */
+            font-family: 'WebkinzBook', sans-serif; /* Keep the font */
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: colorShift 5s infinite;
+        }
+
+        /* Animation for the color effect */
+        @keyframes colorShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
     </style>
 </head>
 <body>
     <div>
-        <h1>START A WEBSITE </h3>
+        <h1>START A WEBSITE</h1>
         <br>
         <br>
-        <img src="goodfairy.png" style="max-width: 100%; height: auto;">
-        <br>
+        <!-- Horizontal line of fairy images -->
+        <div class="fairy-images">
+            <img src="AlyssaFairy.png" alt="Alyssa Fairy">
+            <img src="goodfairy.png" alt="Good Fairy">
+            <img src="badfairy.png" alt="Bad Fairy">
+        </div>
         <br>
         <a href="https://lmetropolyt.github.io/Webkinz_Gem_Guide/">My GD2 Website</a>
+        <br>
+        <br>
         <br>
         <br>
         <a href="CitingCode/index.html">Citing Code</a>
@@ -36,6 +121,7 @@
         <a href="P5 Arrays/">P5 + Arrays</a>
         <br>
         <a href="pagenotfound.html">Final Project</a>
+        <br>
         <br>
         <br>
         <br>
@@ -51,7 +137,6 @@
         <br>
         <br>
         <script src="sketch.js"></script>
-
     </div>
 </body>
 </html>
