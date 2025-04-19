@@ -4,48 +4,65 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh; /* Set the body height to the viewport height */
 }
 
 .game-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    flex-direction: row; /* Arrange character and controls side by side */
+    justify-content: space-evenly; /* Spread out character and controls */
+    align-items: center; /* Center everything vertically */
+    height: 100%; /* Fill the entire viewport */
+    gap: 40px; /* Add space between character and controls */
 }
 
 .character {
     position: relative;
-    width: 300px;
-    height: 500px;
+    width: 500px; /* Increase width to fit larger images */
+    height: 800px; /* Increase height to fit larger images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; /* Allow images to overflow if necessary */
 }
 
 .character img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: auto;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    height: 100%; /* Set height to 250% */
+    width: auto; /* Maintain aspect ratio */
     visibility: hidden; /* Hide images by default */
+    object-fit: contain; /* Ensure images fit within the container */
 }
 
 .character img[src]:not([src=""]) {
-    visibility: visible; /* Show images only when the src is set and not empty */
+    visibility: visible; /* Show images only when the src is set */
 }
 
 .controls {
-    margin-top: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column; /* Stack controls vertically */
+    align-items: flex-start; /* Align controls to the left */
+    gap: 15px; /* Add space between categories */
+    max-height: 90%; /* Prevent controls from overflowing */
+    overflow-y: auto; /* Add scroll only if necessary */
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Wider controls section */
 }
 
 .category {
-    background: #fff;
+    background: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
-    width: 200px;
+    width: 100%; /* Use full width of the controls section */
+    text-align: center;
 }
 
 button {
@@ -56,6 +73,7 @@ button {
     background-color: #007bff;
     color: white;
     cursor: pointer;
+    font-size: 0.9em;
 }
 
 button:hover {
