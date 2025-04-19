@@ -1,59 +1,64 @@
+@font-face {
+    font-family: 'WebkinzBook';
+    src: url('webkinz_book_cyrillic.otf') format('opentype');
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'WebkinzBook', Arial, sans-serif;
     background-color: #f0f0f0;
     text-align: center;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
-    height: 100vh; /* Set the body height to the viewport height */
+    overflow: hidden;
+    height: 100vh;
 }
 
 .game-container {
     display: flex;
-    flex-direction: row; /* Arrange character and controls side by side */
-    justify-content: space-evenly; /* Spread out character and controls */
-    align-items: center; /* Center everything vertically */
-    height: 100%; /* Fill the entire viewport */
-    gap: 40px; /* Add space between character and controls */
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    gap: 40px;
 }
 
 .character {
     position: relative;
-    width: 500px; /* Increase width to fit larger images */
-    height: 800px; /* Increase height to fit larger images */
+    width: 500px;
+    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible; /* Allow images to overflow if necessary */
+    overflow: visible;
 }
 
 .character img {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for centering */
-    height: 100%; /* Set height to 250% */
-    width: auto; /* Maintain aspect ratio */
-    visibility: hidden; /* Hide images by default */
-    object-fit: contain; /* Ensure images fit within the container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: auto;
+    visibility: hidden;
+    object-fit: contain;
 }
 
 .character img[src]:not([src=""]) {
-    visibility: visible; /* Show images only when the src is set */
+    visibility: visible;
 }
 
 .controls {
     display: flex;
-    flex-direction: column; /* Stack controls vertically */
-    align-items: flex-start; /* Align controls to the left */
-    gap: 15px; /* Add space between categories */
-    max-height: 90%; /* Prevent controls from overflowing */
-    overflow-y: auto; /* Add scroll only if necessary */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    max-height: 90%; /* This allowed me to keep the entire fairy viable while going through clothing */
+    overflow-y: auto; /* This allowed me to keep the entire fairy viable while going through clothing */
     padding: 20px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px; /* Wider controls section */
+    width: 300px;
 }
 
 .category {
@@ -61,7 +66,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
-    width: 100%; /* Use full width of the controls section */
+    width: 100%;
     text-align: center;
 }
 
@@ -74,6 +79,7 @@ button {
     color: white;
     cursor: pointer;
     font-size: 0.9em;
+    font-family: 'WebkinzBook', Arial, sans-serif;
 }
 
 button:hover {

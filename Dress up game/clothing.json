@@ -70,48 +70,48 @@
             "id": "shoe",
             "name": "Shoe",
             "options": [
-                { "name": "shoe", "image": "shoe (1).png" },
-                { "name": "shoe", "image": "shoe (2).png" },
-                { "name": "shoe", "image": "shoe (3).png" },
-                { "name": "shoe", "image": "shoe (4).png" }
+                { "name": "Purple Shoe", "image": "shoe (1).png" },
+                { "name": "Black Shoe", "image": "shoe (2).png" },
+                { "name": "Pink Shoe", "image": "shoe (3).png" },
+                { "name": "Orange Shoe", "image": "shoe (4).png" }
             ]
         },
         {
             "id": "dress",
             "name": "Dress",
             "options": [
-                { "name": "dress", "image": "dress (1).png" },
-                { "name": "dress", "image": "dress (2).png" },
-                { "name": "Default dress", "image": "dress (3).png" },
-                { "name": "Default dress", "image": "dress (4).png" },
-                { "name": "Default dress", "image": "dress(5).png" },
-                { "name": "Default dress", "image": "dress (6).png" },
-                { "name": "Default dress", "image": "dress(7).png" },
-                { "name": "Default dress", "image": "dress (8).png" },
-                { "name": "Default dress", "image": "dress (9).png" }
+                { "name": "Gothic Dress", "image": "dress (1).png" },
+                { "name": "Purple Dress", "image": "dress (2).png" },
+                { "name": "Pink dress", "image": "dress (3).png" },
+                { "name": "Chartreuse Dress", "image": "dress (4).png" },
+                { "name": "Purple Leaf Dress", "image": "dress (5).png" },
+                { "name": "Pink Leaf Dress", "image": "dress (6).png" },
+                { "name": "Red Leaf Dress", "image": "dress (7).png" },
+                { "name": "Leaf Gown", "image": "dress (8).png" },
+                { "name": "Mermaid Gown", "image": "dress (9).png" }
             ]
         },
         {
             "id": "wand",
             "name": "Wand",
             "options": [
-                { "name": "wand 1", "image": "wand (1).png" },
-                { "name": "wand 2", "image": "wand (2).png" },
-                { "name": "wand 3", "image": "wand (3).png" },
-                { "name": "wand 4", "image": "wand (4).png" },
-                { "name": "wand 5", "image": "wand (5).png" }
+                { "name": "Shell Wand", "image": "wand (1).png" },
+                { "name": "Classic Wand", "image": "wand (2).png" },
+                { "name": "Orange Wand", "image": "wand (3).png" },
+                { "name": "Star Wand", "image": "wand (4).png" },
+                { "name": "Black Wand", "image": "wand (5).png" }
             ]
         },
         {
             "id": "acc",
             "name": "Accessory",
             "options": [
-                { "name": "acc", "image": "acc (1).png" },
-                { "name": "acc", "image": "acc (2).png" },
-                { "name": "acc", "image": "acc (3).png" },
-                { "name": "acc", "image": "acc (4).png" },
-                { "name": "acc", "image": "acc (5).png" },
-                { "name": "acc", "image": "acc (6).png" }
+                { "name": "Earrings", "image": "acc (1).png" },
+                { "name": "Blush", "image": "acc (2).png" },
+                { "name": "Leaf Crown", "image": "acc (3).png" },
+                { "name": "Flower 1", "image": "acc (4).png" },
+                { "name": "Flower 2", "image": "acc (5).png" },
+                { "name": "Petal Crown", "image": "acc (6).png" }
             ]
         }
     ]
