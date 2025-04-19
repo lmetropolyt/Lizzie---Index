@@ -6,8 +6,8 @@ function setup() {
 }
 
 function draw() {
-    clear(); // Clear the canvas for transparency
-    background(0, 0, 0, 0); // Transparent background
+    // Set a solid purple background
+    background(162, 55, 255); // RGB for purple (#a237ff)
 
     // Create new snowflakes
     let t = frameCount / 60; // Time variable
