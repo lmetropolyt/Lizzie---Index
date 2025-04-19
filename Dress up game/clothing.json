@@ -1,0 +1,90 @@
+{
+    "categories": [
+        {
+            "id": "wing",
+            "name": "Wings",
+            "options": [
+                { "name": "Wing 1", "image": "wing (1).png" },
+                { "name": "Wing 2", "image": "wing (2).png" },
+                { "name": "Wing 3", "image": "wing (3).png" },
+                { "name": "Wing 4", "image": "wing (4).png" },
+                { "name": "Wing 5", "image": "wing (5).png" }
+            ]
+        },
+        {
+            "id": "body",
+            "name": "Body",
+            "options": [
+                { "name": "Default Body", "image": "body (1).png" },
+                { "name": "Default Body", "image": "body (2).png" },
+                { "name": "Default Body", "image": "body (3).png" },
+                { "name": "Default Body", "image": "body (4).png" },
+                { "name": "Default Body", "image": "body (5).png" },
+                { "name": "Default Body", "image": "body (6).png" },
+                { "name": "Default Body", "image": "body (7).png" },
+                { "name": "Default Body", "image": "body (8).png" }
+            ]
+        },
+        {
+            "id": "eye",
+            "name": "Eye",
+            "options": [
+                { "name": "Blue Eyes", "image": "eye (1).png" },
+                { "name": "Green Eyes", "image": "eye (2).png" },
+                { "name": "Blue Eyes", "image": "eye (3).png" },
+                { "name": "Green Eyes", "image": "eye (4).png" },
+                { "name": "Blue Eyes", "image": "eye (5).png" },
+                { "name": "Green Eyes", "image": "eye (6).png" },
+                { "name": "Green Eyes", "image": "eye (7).png" }
+            ]
+        },
+        {
+            "id": "lip",
+            "name": "Lip",
+            "options": [
+                { "name": "Red Lips", "image": "images/lip1.png" },
+                { "name": "Pink Lips", "image": "images/lip2.png" }
+            ]
+        },
+        {
+            "id": "hair",
+            "name": "Hair",
+            "options": [
+                { "name": "Blonde Hair", "image": "images/hair1.png" },
+                { "name": "Brown Hair", "image": "images/hair2.png" }
+            ]
+        },
+        {
+            "id": "shoe",
+            "name": "Shoe",
+            "options": [
+                { "name": "Heels", "image": "images/shoe1.png" },
+                { "name": "Flats", "image": "images/shoe2.png" }
+            ]
+        },
+        {
+            "id": "dress",
+            "name": "Dress",
+            "options": [
+                { "name": "Ball Gown", "image": "images/dress1.png" },
+                { "name": "Casual Dress", "image": "images/dress2.png" }
+            ]
+        },
+        {
+            "id": "wand",
+            "name": "Wand",
+            "options": [
+                { "name": "Magic Wand", "image": "images/wand1.png" },
+                { "name": "Star Wand", "image": "images/wand2.png" }
+            ]
+        },
+        {
+            "id": "acc",
+            "name": "Accessory",
+            "options": [
+                { "name": "Necklace", "image": "images/acc1.png" },
+                { "name": "Bracelet", "image": "images/acc2.png" }
+            ]
+        }
+    ]
+}
