@@ -42,48 +42,76 @@
             "id": "lip",
             "name": "Lip",
             "options": [
-                { "name": "Red Lips", "image": "images/lip1.png" },
-                { "name": "Pink Lips", "image": "images/lip2.png" }
+                { "name": "lip1", "image": "lip (1).png" },
+                { "name": "lip2", "image": "lip (2).png" },
+                { "name": "lip3", "image": "lip (3).png" },
+                { "name": "lip4", "image": "lip (4).png" },
+                { "name": "lip5", "image": "lip (5).png" },
+                { "name": "lip6", "image": "lip (6).png" },
+                { "name": "lip7", "image": "lip (7).png" }
             ]
         },
         {
             "id": "hair",
             "name": "Hair",
             "options": [
-                { "name": "Blonde Hair", "image": "images/hair1.png" },
-                { "name": "Brown Hair", "image": "images/hair2.png" }
+                { "name": "Hair", "image": "hair (1).png" },
+                { "name": "Hair", "image": "hair (2).png" },
+                { "name": "Hair", "image": "hair (3).png" },
+                { "name": "Hair", "image": "hair (4).png" },
+                { "name": "Hair", "image": "hair (5).png" },
+                { "name": "Hair", "image": "hair (6).png" },
+                { "name": "Hair", "image": "hair (5).png" },
+                { "name": "Hair", "image": "hair (6).png" },
+                { "name": "Hair", "image": "hair (7).png" }
             ]
         },
         {
             "id": "shoe",
             "name": "Shoe",
             "options": [
-                { "name": "Heels", "image": "images/shoe1.png" },
-                { "name": "Flats", "image": "images/shoe2.png" }
+                { "name": "shoe", "image": "shoe (1).png" },
+                { "name": "shoe", "image": "shoe (2).png" },
+                { "name": "shoe", "image": "shoe (3).png" },
+                { "name": "shoe", "image": "shoe (4).png" }
             ]
         },
         {
             "id": "dress",
             "name": "Dress",
             "options": [
-                { "name": "Ball Gown", "image": "images/dress1.png" },
-                { "name": "Casual Dress", "image": "images/dress2.png" }
+                { "name": "dress", "image": "dress (1).png" },
+                { "name": "dress", "image": "dress (2).png" },
+                { "name": "Default dress", "image": "dress (3).png" },
+                { "name": "Default dress", "image": "dress (4).png" },
+                { "name": "Default dress", "image": "dress(5).png" },
+                { "name": "Default dress", "image": "dress (6).png" },
+                { "name": "Default dress", "image": "dress(7).png" },
+                { "name": "Default dress", "image": "dress (8).png" },
+                { "name": "Default dress", "image": "dress (9).png" }
             ]
         },
         {
             "id": "wand",
             "name": "Wand",
             "options": [
-                { "name": "Magic Wand", "image": "images/wand1.png" },
-                { "name": "Star Wand", "image": "images/wand2.png" }
+                { "name": "wand 1", "image": "wand (1).png" },
+                { "name": "wand 2", "image": "wand (2).png" },
+                { "name": "wand 3", "image": "wand (3).png" },
+                { "name": "wand 4", "image": "wand (4).png" },
+                { "name": "wand 5", "image": "wand (5).png" }
             ]
         },
         {
             "id": "acc",
             "name": "Accessory",
             "options": [
-                { "name": "Necklace", "image": "images/acc1.png" },
-                { "name": "Bracelet", "image": "images/acc2.png" }
+                { "name": "acc", "image": "acc (1).png" },
+                { "name": "acc", "image": "acc (2).png" },
+                { "name": "acc", "image": "acc (3).png" },
+                { "name": "acc", "image": "acc (4).png" },
+                { "name": "acc", "image": "acc (5).png" },
+                { "name": "acc", "image": "acc (6).png" }
             ]
         }
     ]
