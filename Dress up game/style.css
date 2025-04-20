@@ -5,12 +5,43 @@
 
 body {
     font-family: 'WebkinzBook', Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%; /* Make the gradient larger for animation */
+    animation: rainbowBackground 10s infinite; /* Animate the gradient */
     text-align: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
     height: 100vh;
+    position: relative;
+    z-index: 0; /* Ensure body is the base layer */
+}
+
+/* Sparkle effect */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: sparkle 2s infinite;
+    z-index: -1; /* Push the sparkles behind everything */
+}
+
+@keyframes rainbowBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
 }
 
 .game-container {
@@ -20,6 +51,8 @@ body {
     align-items: center;
     height: 100%;
     gap: 40px;
+    position: relative; /* Ensure it stays above the background */
+    z-index: 1; /* Place above the background */
 }
 
 .character {
@@ -30,6 +63,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: visible;
+    z-index: 1; /* Ensure character stays above the background */
 }
 
 .character img {
@@ -55,15 +89,16 @@ body {
     max-height: 90%; /* This allowed me to keep the entire fairy viable while going through clothing */
     overflow-y: auto; /* This allowed me to keep the entire fairy viable while going through clothing */
     padding: 20px;
-    background: #fff;
+    background: #ff00d4;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 300px;
+    z-index: 1; /* Ensure controls stay above the background */
 }
 
 .category {
-    background: #f9f9f9;
-    border: 1px solid #ccc;
+    background: #ffa9e1;
+    border: 1px solid #ff00d0;
     border-radius: 10px;
     padding: 10px;
     width: 100%;
@@ -74,14 +109,17 @@ button {
     margin: 5px;
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
+    border-radius: 5px; /* Make the button rectangular */
+    background-color: hotpink; /* Set the button color */
+    color: white; /* Set the text color */
+    font-family: 'WebkinzBook', Arial, sans-serif; /* Use the custom font */
+    font-size: 14px; /* Set the font size */
     cursor: pointer;
-    font-size: 0.9em;
-    font-family: 'WebkinzBook', Arial, sans-serif;
+    text-align: center;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff69b4; /* Slightly lighter pink on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Smooth hover effect */
 }

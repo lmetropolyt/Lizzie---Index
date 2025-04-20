@@ -4,51 +4,66 @@
             "id": "wing",
             "name": "Wings",
             "options": [
-                { "name": "Wing 1", "image": "wing (1).png" },
-                { "name": "Wing 2", "image": "wing (2).png" },
-                { "name": "Wing 3", "image": "wing (3).png" },
-                { "name": "Wing 4", "image": "wing (4).png" },
-                { "name": "Wing 5", "image": "wing (5).png" }
+                { "name": "Bat Wings", "image": "wing (1).png" },
+                { "name": "Blue Fairy Wings", "image": "wing (2).png" },
+                { "name": "Pink Fairy Wings", "image": "wing (3).png" },
+                { "name": "Orange Fairy Wings", "image": "wing (4).png" },
+                { "name": "Mermaid Wings", "image": "wing (5).png" }
             ]
         },
         {
             "id": "body",
             "name": "Body",
             "options": [
-                { "name": "Default Body", "image": "body (1).png" },
-                { "name": "Default Body", "image": "body (2).png" },
-                { "name": "Default Body", "image": "body (3).png" },
-                { "name": "Default Body", "image": "body (4).png" },
-                { "name": "Default Body", "image": "body (5).png" },
-                { "name": "Default Body", "image": "body (6).png" },
-                { "name": "Default Body", "image": "body (7).png" },
-                { "name": "Default Body", "image": "body (8).png" }
+                { "name": "Body 1", "image": "body (1).png" },
+                { "name": "Pink Body", "image": "body (2).png" },
+                { "name": "Sage Green Body", "image": "body (3).png" },
+                { "name": "Body 2", "image": "body (4).png" },
+                { "name": "Body 3", "image": "body (5).png" },
+                { "name": "Green Body", "image": "body (6).png" },
+                { "name": "Body 4", "image": "body (7).png" },
+                { "name": "Body 5", "image": "body (8).png" }
             ]
         },
         {
             "id": "eye",
             "name": "Eye",
             "options": [
-                { "name": "Blue Eyes", "image": "eye (1).png" },
-                { "name": "Green Eyes", "image": "eye (2).png" },
-                { "name": "Blue Eyes", "image": "eye (3).png" },
-                { "name": "Green Eyes", "image": "eye (4).png" },
-                { "name": "Blue Eyes", "image": "eye (5).png" },
-                { "name": "Green Eyes", "image": "eye (6).png" },
-                { "name": "Green Eyes", "image": "eye (7).png" }
+                { "name": "Mint Eyes", "image": "eye (1).png" },
+                { "name": "Black Eyes", "image": "eye (2).png" },
+                { "name": "Purple Eyes", "image": "eye (3).png" },
+                { "name": "Navy Eyes", "image": "eye (4).png" },
+                { "name": "Orange Eyes 1", "image": "eye (5).png" },
+                { "name": "Orange Eyes 2", "image": "eye (6).png" },
+                { "name": "Cotton Candy Eyes", "image": "eye (7).png" }
             ]
         },
         {
             "id": "lip",
             "name": "Lip",
             "options": [
-                { "name": "lip1", "image": "lip (1).png" },
-                { "name": "lip2", "image": "lip (2).png" },
-                { "name": "lip3", "image": "lip (3).png" },
-                { "name": "lip4", "image": "lip (4).png" },
-                { "name": "lip5", "image": "lip (5).png" },
-                { "name": "lip6", "image": "lip (6).png" },
-                { "name": "lip7", "image": "lip (7).png" }
+                { "name": "Smirk", "image": "lip (1).png" },
+                { "name": "Orange 1 Lip", "image": "lip (2).png" },
+                { "name": "Orange 2 Lip", "image": "lip (3).png" },
+                { "name": "Pink Lip", "image": "lip (4).png" },
+                { "name": "Purple Lip", "image": "lip (5).png" },
+                { "name": "Black Lip", "image": "lip (6).png" },
+                { "name": "Pink 2 Lip", "image": "lip (7).png" }
+            ]
+        },
+        {
+            "id": "dress",
+            "name": "Dress",
+            "options": [
+                { "name": "Gothic Dress", "image": "dress (1).png" },
+                { "name": "Purple Dress", "image": "dress (2).png" },
+                { "name": "Pink dress", "image": "dress (3).png" },
+                { "name": "Chartreuse Dress", "image": "dress (4).png" },
+                { "name": "Purple Leaf Dress", "image": "dress (5).png" },
+                { "name": "Pink Leaf Dress", "image": "dress (6).png" },
+                { "name": "Red Leaf Dress", "image": "dress (7).png" },
+                { "name": "Leaf Gown", "image": "dress (8).png" },
+                { "name": "Mermaid Gown", "image": "dress (9).png" }
             ]
         },
         {
@@ -74,21 +89,6 @@
                 { "name": "Black Shoe", "image": "shoe (2).png" },
                 { "name": "Pink Shoe", "image": "shoe (3).png" },
                 { "name": "Orange Shoe", "image": "shoe (4).png" }
-            ]
-        },
-        {
-            "id": "dress",
-            "name": "Dress",
-            "options": [
-                { "name": "Gothic Dress", "image": "dress (1).png" },
-                { "name": "Purple Dress", "image": "dress (2).png" },
-                { "name": "Pink dress", "image": "dress (3).png" },
-                { "name": "Chartreuse Dress", "image": "dress (4).png" },
-                { "name": "Purple Leaf Dress", "image": "dress (5).png" },
-                { "name": "Pink Leaf Dress", "image": "dress (6).png" },
-                { "name": "Red Leaf Dress", "image": "dress (7).png" },
-                { "name": "Leaf Gown", "image": "dress (8).png" },
-                { "name": "Mermaid Gown", "image": "dress (9).png" }
             ]
         },
         {
