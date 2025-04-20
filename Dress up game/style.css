@@ -30,7 +30,7 @@ body {
     z-index: 2; /* Ensure the title stays above other elements */
 }
 
-/* Sparkle effect */
+/* Sparkle effect was something new I did especially i have done a lot of rainbow effects but putting a pattern ontop of that was new to me. espescially with the other layers that had to be ontop*/
 body::after {
     content: '';
     position: absolute;
@@ -43,7 +43,7 @@ body::after {
     opacity: 0.5;
     pointer-events: none;
     animation: sparkle 2s infinite;
-    z-index: -1; /* Push the sparkles behind everything */
+    z-index: -1; /* Push the sparkles behind everything. this was important because my patterns kept going on top of thr Json pngs*/
 }
 
 @keyframes rainbowBackground {

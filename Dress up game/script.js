@@ -1,4 +1,4 @@
-// Load clothing data from JSON and initialize the game
+// Load clothing data from JSON so that the order is always perfect the way i want it and it easy to organize all the categories
 fetch('clothing.json')
     .then(response => response.json())
     .then(data => initializeGame(data));
@@ -7,17 +7,15 @@ function initializeGame(data) {
     const characterContainer = document.getElementById('character');
     const controlsContainer = document.getElementById('controls');
 
-    // Create clothing layers dynamically
+    // Created clothing layers here
     data.categories.forEach(category => {
-        // Create an <img> element for each category
         const img = document.createElement('img');
         img.id = category.id;
         img.classList.add('clothing');
-        img.src = category.id === 'body' ? category.options[0].image : ''; // Default body image
+        img.src = category.id === 'body' ? category.options[0].image : ''; // This was my favorite line. At first i couldn't make it so that the body stayed there always. The game used to start with no character until you clicked a button. This was the line that helped make my game much more intuitive to the player
         img.alt = category.name;
         characterContainer.appendChild(img);
 
-        // Create controls for each category
         const categoryDiv = document.createElement('div');
         categoryDiv.classList.add('category');
         categoryDiv.innerHTML = `<h3>${category.name}</h3>`;
@@ -29,7 +27,6 @@ function initializeGame(data) {
             categoryDiv.appendChild(button);
         });
 
-        // Add the category controls to the controls container
         controlsContainer.appendChild(categoryDiv);
     });
 }
