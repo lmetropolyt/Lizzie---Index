@@ -17,6 +17,19 @@ body {
     z-index: 0; /* Ensure body is the base layer */
 }
 
+/* Title styling */
+.title {
+    position: fixed; /* Ensure the title stays in the viewport */
+    top: 10px; /* Adjust the vertical position */
+    left: 10px; /* Adjust the horizontal position */
+    font-family: 'WebkinzBook', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: hotpink;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure the title stays above other elements */
+}
+
 /* Sparkle effect */
 body::after {
     content: '';
@@ -89,7 +102,7 @@ body::after {
     max-height: 90%; /* This allowed me to keep the entire fairy viable while going through clothing */
     overflow-y: auto; /* This allowed me to keep the entire fairy viable while going through clothing */
     padding: 20px;
-    background: #ff00d4;
+    background: #ff0080;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 300px;
@@ -97,8 +110,8 @@ body::after {
 }
 
 .category {
-    background: #ffa9e1;
-    border: 1px solid #ff00d0;
+    background: #ffa8df;
+    border: 1px solid #ff00aa;
     border-radius: 10px;
     padding: 10px;
     width: 100%;

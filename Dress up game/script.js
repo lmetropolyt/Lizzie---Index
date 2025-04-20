@@ -13,7 +13,7 @@ function initializeGame(data) {
         const img = document.createElement('img');
         img.id = category.id;
         img.classList.add('clothing');
-        img.src = ''; // Start with no clothing
+        img.src = category.id === 'body' ? category.options[0].image : ''; // Default body image
         img.alt = category.name;
         characterContainer.appendChild(img);
 
@@ -29,17 +29,14 @@ function initializeGame(data) {
             categoryDiv.appendChild(button);
         });
 
-        // Add a "Remove" button
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = () => changeClothing(category.id, '');
-        categoryDiv.appendChild(removeButton);
-
+        // Add the category controls to the controls container
         controlsContainer.appendChild(categoryDiv);
     });
 }
 
-function changeClothing(categoryId, imagePath) {
-    const clothingElement = document.getElementById(categoryId);
-    clothingElement.src = imagePath;
+function changeClothing(categoryId, image) {
+    const img = document.getElementById(categoryId);
+    if (img) {
+        img.src = image;
+    }
 }
