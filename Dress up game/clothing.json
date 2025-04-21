@@ -1,6 +1,24 @@
 {
     "categories": [
         {
+            "id": "music",
+            "name": "Music",
+            "options": [
+                { "name": "Tulip Trouble", "file": "t.mp3" },
+                { "name": "Supermodelz", "file": "f.mp3" },
+                { "name": "Caramel Soup", "file": "Music.mp3" }
+            ]
+        },
+        {
+            "id": "habitat",
+            "name": "Habitat",
+            "options": [
+                { "name": "Forest", "image": "forest.png" },
+                { "name": "Ocean", "image": "ocean.png" },
+                { "name": "Tulip Field", "image": "tulip.png" }
+            ]
+        },
+        {
             "id": "wing",
             "name": "Wings",
             "options": [
@@ -70,15 +88,15 @@
             "id": "hair",
             "name": "Hair",
             "options": [
-                { "name": "Hair", "image": "hair (1).png" },
-                { "name": "Hair", "image": "hair (2).png" },
-                { "name": "Hair", "image": "hair (3).png" },
-                { "name": "Hair", "image": "hair (4).png" },
-                { "name": "Hair", "image": "hair (5).png" },
-                { "name": "Hair", "image": "hair (6).png" },
-                { "name": "Hair", "image": "hair (5).png" },
-                { "name": "Hair", "image": "hair (6).png" },
-                { "name": "Hair", "image": "hair (7).png" }
+                { "name": "Red Space Buns", "image": "hair (1).png" },
+                { "name": "Purple Space Buns", "image": "hair (2).png" },
+                { "name": "Orange Gumdrop Hair", "image": "hair (3).png" },
+                { "name": "Pink Braids", "image": "hair (4).png" },
+                { "name": "Black & Green Braids", "image": "hair (5).png" },
+                { "name": "Black Gumdrop Hair", "image": "hair (6).png" },
+                { "name": "Orange Braids", "image": "hair (7).png" },
+                { "name": "Chartreuse Hair", "image": "hair (8).png" },
+                { "name": "Red Hair", "image": "hair (9).png" }
             ]
         },
         {
